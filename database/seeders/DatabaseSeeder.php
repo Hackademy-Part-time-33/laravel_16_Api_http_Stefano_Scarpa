@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(CatgoryFactory::class);
 
         User::factory(100)->create();
 
@@ -22,5 +21,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Stefano',
             'email' => 'scarpastefano@icloud.com',
         ]);
+
+        $this->call(ProductSeeder::class);
     }
 }
